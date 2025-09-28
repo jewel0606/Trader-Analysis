@@ -1,4 +1,49 @@
-# Trader-Analysis
+
+# Trading Data Analysis - SQL Reports
+📊 Overview
+Comprehensive SQL-based analysis of proprietary trading performance data focusing on XAUUSD (Gold) trading activities. This repository contains complete data analysis scripts for trader performance evaluation and profitability insights.
+🎯 Purpose
+
+Analyze trading performance and profitability patterns
+Evaluate risk management effectiveness
+Identify most/least profitable trading strategies
+Provide data-driven insights for trader assessment
+
+📈 Analysis Features
+
+Profitability Analysis - Login-based profit ranking and cumulative performance
+Risk Assessment - Stop loss and take profit effectiveness analysis
+Trading Patterns - Buy vs Sell performance comparison
+Data Quality - Missing values detection and data validation
+Performance Metrics - Win rates, profit distribution, and consistency analysis
+
+🗄️ Database Schema
+sqlCREATE TABLE analyst (
+    login VARCHAR(20),      -- Trader account ID
+    ticket VARCHAR(20),     -- Unique trade identifier  
+    symbol VARCHAR(20),     -- Trading instrument (XAUUSD)
+    type VARCHAR(10),       -- Trade direction (Buy/Sell)
+    open_time TIMESTAMP,    -- Trade entry time
+    close_time TIMESTAMP,   -- Trade exit time
+    open_price DECIMAL(10,2), -- Entry price level
+    close_price DECIMAL(10,2), -- Exit price level  
+    stop_loss DECIMAL(10,2),   -- Risk management level
+    take_profit DECIMAL(10,2), -- Profit target level
+    pips INTEGER,           -- Price movement in pips
+    reason INTEGER,         -- Trade exit reason code
+    volume DECIMAL(10,2),   -- Position size
+    profit DECIMAL(10,2)    -- Realized profit/loss
+);
+📋 Key Reports Generated
+
+Data Quality Assessment - Missing values and duplicates check
+Profitability Rankings - Most/least profitable traders
+Cumulative Profit Analysis - Running profit totals
+Profit Distribution - Performance categorization
+Risk-Reward Analysis - Trading efficiency metrics
+Monthly Performance - Time-based trend analysis
+Volume Analysis - Position size vs profitability correlation
+
 
 ### 1. Data Structure Overview
 
